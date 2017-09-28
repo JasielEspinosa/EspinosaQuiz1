@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.espinosa.espinosaquiz1.Activity.MainActivity">
+
+
+    <!--    <ListView
+            android:id="@+id/lvAndroidVersions"
+            android:layout_height="495dp"
+            android:layout_width="368dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+        </ListView>-->
+
+    <LinearLayout
+        android:id="@+id/linearButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.965">
+
+        <Button
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="Home"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="447dp" />
+
+        <Button
+            android:id="@+id/btn_android1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="jellybeanIntent"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn_android2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="kitkatIntent"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btn_android3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="marshmallowIntent"
+            android:text="3" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearTexts"
+        android:layout_width="368dp"
+        android:layout_height="431dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearButtons"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TextView
+            android:id="@+id/tv_jellybean"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To Choose Jelly Bean\nPress 1"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/tv_marshmallow"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_kitkat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To Choose Kitkat\nPress 2"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/linearButtons"
+            app:layout_constraintLeft_toRightOf="@+id/tv_marshmallow"
+            app:layout_constraintRight_toLeftOf="@+id/tv_marshmallow"
+            app:layout_constraintTop_toBottomOf="@+id/tv_marshmallow" />
+
+        <TextView
+            android:id="@+id/tv_marshmallow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To Choose Marshmallow\nPress 3"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/tv_kitkat"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_jellybean" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

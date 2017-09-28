@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Espinosa\'s Android Versions</string>
+    <string-array name="AndroidVersions">
+        <item>Jelly Bean</item>
+        <item>Kitkat</item>
+        <item>Marshmallow</item>
+    </string-array>
+</resources>
