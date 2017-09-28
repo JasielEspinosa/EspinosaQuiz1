@@ -7,7 +7,7 @@
     tools:context="com.espinosa.espinosaquiz1.Activity.MainActivity">
 
 
-    <!--    <ListView
+<!--    <ListView
             android:id="@+id/lvAndroidVersions"
             android:layout_height="495dp"
             android:layout_width="368dp"
@@ -19,65 +19,26 @@
         </ListView>-->
 
     <LinearLayout
-        android:id="@+id/linearButtons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.965">
-
-        <Button
-            android:id="@+id/btn_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="false"
-            android:text="Home"
-            tools:layout_editor_absoluteX="148dp"
-            tools:layout_editor_absoluteY="447dp" />
-
-        <Button
-            android:id="@+id/btn_android1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="jellybeanIntent"
-            android:text="1" />
-
-        <Button
-            android:id="@+id/btn_android2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="kitkatIntent"
-            android:text="2" />
-
-        <Button
-            android:id="@+id/btn_android3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="marshmallowIntent"
-            android:text="3" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/linearTexts"
-        android:layout_width="368dp"
-        android:layout_height="431dp"
-        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="421dp"
         app:layout_constraintBottom_toTopOf="@+id/linearButtons"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_jellybean"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="To Choose Jelly Bean\nPress 1"
+            android:padding="25dp"
+            android:text="@string/select1"
             android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textColorHighlight="@android:color/holo_orange_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tv_marshmallow"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -87,8 +48,13 @@
             android:id="@+id/tv_kitkat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="To Choose Kitkat\nPress 2"
+            android:padding="25dp"
+            android:text="@string/select2"
             android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textColorHighlight="@android:color/holo_orange_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/linearButtons"
             app:layout_constraintLeft_toRightOf="@+id/tv_marshmallow"
             app:layout_constraintRight_toLeftOf="@+id/tv_marshmallow"
@@ -98,12 +64,82 @@
             android:id="@+id/tv_marshmallow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="To Choose Marshmallow\nPress 3"
+            android:padding="25dp"
+            android:text="@string/select3"
             android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textColorHighlight="@android:color/holo_orange_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tv_kitkat"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_jellybean" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginStart="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.965">
+
+        <Button
+            android:id="@+id/btn_home"
+            style="?android:buttonBarButtonStyle"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:clickable="false"
+            android:text="@string/btnHome"
+            android:textColor="@android:color/background_light"
+            android:textColorLink="@android:color/holo_blue_bright"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="447dp" />
+
+        <Button
+            android:id="@+id/btn_android1"
+            style="?android:buttonBarButtonStyle"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="jellybeanIntent"
+            android:text="@string/btn1"
+            android:textColor="@android:color/background_light"
+            android:textColorLink="@android:color/holo_blue_bright" />
+
+        <Button
+            android:id="@+id/btn_android2"
+            style="?android:buttonBarButtonStyle"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="kitkatIntent"
+            android:text="@string/btn2"
+            android:textColor="@android:color/background_light"
+            android:textColorLink="@android:color/holo_blue_bright" />
+
+        <Button
+            android:id="@+id/btn_android3"
+            style="?android:buttonBarButtonStyle"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="marshmallowIntent"
+            android:text="@string/btn3"
+            android:textColor="@android:color/background_light"
+            android:textColorLink="@android:color/holo_blue_bright" />
+
 
     </LinearLayout>
 

@@ -5,4 +5,11 @@
         <item>Kitkat</item>
         <item>Marshmallow</item>
     </string-array>
+    <string name="btnHome">Home</string>
+    <string name="btn1">1</string>
+    <string name="btn2">2</string>
+    <string name="btn3">3</string>
+    <string name="select1">Press 1 to select Jelly Bean</string>
+    <string name="select2">Press 2 to select Kitkat</string>
+    <string name="select3">Press 3 to select Marshmallow</string>
 </resources>
